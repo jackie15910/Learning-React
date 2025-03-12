@@ -8,31 +8,31 @@ const Calculator = () => {
     const clear = () => {
       setInputValue('');
     }
-    const display = () => {
-      setInputValue('');
-    }
-    const calculate = () => {
-      setInputValue('');
-    }
+    const display = (value) => setInputValue(inputValue + value);
+    const calculate = () => setInputValue(eval(inputValue));
 
   return (
   <div>
     <form className='calculator'>
-      <span className='num clear' onClick={() => clear()}>c</span>
       <input type='text' className='value' value={inputValue}></input>
-      <span className='' onClick={() => display('8')}>8</span>
-      <span className='' onClick={() => display('9')}>9</span>
-      <span className='' onClick={() => display('-')}>-</span>
-      <span className='' onClick={() => display('4')}>4</span>
-      <span className='' onClick={() => display('5')}>5</span>
-      <span className='' onClick={() => display('6')}>6</span>
+      <span className='num clear' onClick={() => clear()}>c</span>
+      <span onClick={() => display('/')}>/</span>
+      <span onClick={() => display('*')}>*</span>
+      <span onClick={() => display('7')}>7</span>
+      <span onClick={() => display('8')}>8</span>
+      <span onClick={() => display('9')}>9</span>
+      <span onClick={() => display('-')}>-</span>
+      <span onClick={() => display('4')}>4</span>
+      <span onClick={() => display('5')}>5</span>
+      <span onClick={() => display('6')}>6</span>
       <span className='plus' onClick={() => display('+')}>+</span>
 
-      <span className='' onClick={() => display('8')}>1</span>
-      <span className='' onClick={() => display('9')}>2</span>
-      <span className='' onClick={() => display('-')}>3</span>
-      <span className='' onClick={() => display('4')}>00</span>
-      <span className='' onClick={() => display('5')}>.</span>
+      <span onClick={() => display('1')}>1</span>
+      <span onClick={() => display('2')}>2</span>
+      <span onClick={() => display('3')}>3</span>
+      <span onClick={() => display('0')}>0</span>
+      <span onClick={() => display('00')}>00</span>
+      <span onClick={() => display('.')}>.</span>
       <span className='num equal' onClick={() => calculate()}>=</span>
     </form>
   </div>

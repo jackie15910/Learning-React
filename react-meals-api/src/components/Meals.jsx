@@ -23,12 +23,12 @@ const Meals = () => {
         <img src={strMealThumb} alt={strMeal} />
         <section className='content'>
           <p>{strMeal}</p>
-          <p>{idMeal}</p>
+          <p>#{idMeal}</p>
         </section>
       </section>
-    )
-  })
-  return <div className='meals-container'>{mealsList}</div>
+    );
+  });
+  return <div className='items-container'>{mealsList}</div>
 };
 
 export default Meals;

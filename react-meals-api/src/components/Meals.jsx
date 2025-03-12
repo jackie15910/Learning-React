@@ -11,10 +11,24 @@ const Meals = () => {
     .get("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
     .then((res) => {
       console.log(res.data.meals);
+      setMeals(res.data.meals);
     })
+    .catch((err) => {
+      console.error(err);
+    });
   }, []);
-
-  return <div>Meals</div>
+  const mealsList = meals.map(({strMeal, strMealThumb, idMeal}) => {
+    return (
+      <section className='card'>
+        <img src={strMealThumb} alt={strMeal} />
+        <section className='content'>
+          <p>{strMeal}</p>
+          <p>{idMeal}</p>
+        </section>
+      </section>
+    )
+  })
+  return <div className='meals-container'>{mealsList}</div>
 };
 
 export default Meals;

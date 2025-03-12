@@ -1,9 +1,9 @@
 import React from 'react'
-import Calculator from './components/Calculator'
+import Toggle from './components/Toggle'
 
 const App = () => {
   return (
-      <Calculator/>
+      <Toggle/>
   )
 }
 

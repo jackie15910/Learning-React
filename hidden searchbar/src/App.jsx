@@ -1,9 +1,9 @@
 import React from 'react'
-import Calculator from './components/Calculator'
+import HiddenSearchBar from './components/HiddenSearchBar'
 
 const App = () => {
   return (
-      <Calculator/>
+      <HiddenSearchBar/>
   )
 }
 

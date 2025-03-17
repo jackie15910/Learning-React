@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import "../style.css"
 
-const Calculator = () => {
+const HiddenSearchBar = () => {
     const [,] = useState([]);
 
   return (
@@ -12,4 +12,4 @@ const Calculator = () => {
   )
 };
 
-export default Calculator;
+export default HiddenSearchBar;

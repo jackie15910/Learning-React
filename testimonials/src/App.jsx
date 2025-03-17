@@ -1,9 +1,9 @@
 import React from 'react'
-import Testimonials from './components/Testimonials'
+import Testiomials from './components/Testiomials'
 
 const App = () => {
   return (
-      <Testimonials/>
+      <Testiomials/>
   )
 }
 
